@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{81515BFB-21FF-4FA7-8608-411454997621}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Math", "Math", "{E9464896-6903-40E3-9942-B110447DA0CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intervals", "Intervals", "{C4F5FBD2-DAE9-4749-9C5D-13AA0DDC26AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Intervals", "Core\Math\Intervals\HolisticWare.Core..Math.Intervals\HolisticWare.Core.Math.Intervals.csproj", "{11460C39-776A-48ED-BF3F-CE027EB6D53E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|x64.Build.0 = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Debug|x86.Build.0 = Debug|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|x64.ActiveCfg = Release|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|x64.Build.0 = Release|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|x86.ActiveCfg = Release|Any CPU
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4281D324-96F9-4BE0-87E5-66A67E057FBE}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9464896-6903-40E3-9942-B110447DA0CB} = {81515BFB-21FF-4FA7-8608-411454997621}
+		{C4F5FBD2-DAE9-4749-9C5D-13AA0DDC26AE} = {E9464896-6903-40E3-9942-B110447DA0CB}
+		{11460C39-776A-48ED-BF3F-CE027EB6D53E} = {C4F5FBD2-DAE9-4749-9C5D-13AA0DDC26AE}
+	EndGlobalSection
+EndGlobal
