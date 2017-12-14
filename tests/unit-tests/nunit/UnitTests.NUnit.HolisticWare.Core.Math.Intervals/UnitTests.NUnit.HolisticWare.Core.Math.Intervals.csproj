@@ -25,23 +25,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\source\Math\HolisticWare.Math.Intervals\HolisticWare.Math.Intervals.csproj">
-      <Project>{A891F27A-947B-442A-8D32-7ECD363BF7EA}</Project>
-      <Name>HolisticWare.Math.Intervals</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\..\source\Math\HolisticWare.Math.Core\HolisticWare.Math.csproj">
-      <Project>{5CB7BD04-320A-4437-A401-99A8EB5F49F5}</Project>
-      <Name>HolisticWare.Math</Name>
+    <ProjectReference Include="..\..\..\..\source\HolisticWare.Core.Math.Intervals.NetStandard10\HolisticWare.Core.Math.Intervals.NetStandard10.csproj">
+      <Project>{4390ACCD-C763-4A93-8A52-964484D38F41}</Project>
+      <Name>HolisticWare.Core.Math.Intervals.NetStandard10</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\..\UnitTests.HolisticWare.Core.Math.Intervals\UnitTests.HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.HolisticWare.Core.Math.Intervals\UnitTests.HolisticWare.Core.Math.Intervals.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
