@@ -26,7 +26,7 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
     #if XUNIT
     [TestFixture()]
     #endif
-    public class Interval
+    public class IntervalConstructorTests
     {
         Interval<int> i01 = null;
 
@@ -67,35 +67,6 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
             Console.WriteLine($"interval d13 = {d13}");
             Console.WriteLine($"interval d14 = {d14}");
 
-
-            List<Interval<int>> intervals_int = new List<Interval<int>>()
-            {
-                new Interval<int>(-3,6),
-                new Interval<int>(0,3, false, false),
-                new Interval<int>(0,3, false, true),
-                new Interval<int>(0,3, true, false),
-                new Interval<int>(0,3, true, true),
-                new Interval<int>(11,11, true, true),
-            };
-
-            foreach(Interval<int> i in intervals_int)
-            {
-                Console.WriteLine($"interval = {i}");
-            }
-
-            List<Interval<double>> intervals_double = new List<Interval<double>>()
-            {
-                new Interval<double>(-10.1,3.3),
-                new Interval<double>(-10.1,3.3, false, false),
-                new Interval<double>(-10.1,3.3, false, true),
-                new Interval<double>(-10.1,3.3, true, false),
-                new Interval<double>(-10.1,3.3, true, true),
-            };
-
-            foreach (Interval<double> i in intervals_double)
-            {
-                Console.WriteLine($"interval = {i}");
-            }
 
             return;
         }

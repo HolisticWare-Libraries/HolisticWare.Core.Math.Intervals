@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.HolisticWare.Core.Math.Intervals", "UnitTests.HolisticWare.Core.Math.Intervals\UnitTests.HolisticWare.Core.Math.Intervals.shproj", "{F029AA1F-74BC-463E-A6C3-559BC4BB2C53}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nunit", "nunit", "{F8D7CEC9-E8F5-4C79-99B6-9E08EE76E6B9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xunit2", "xunit2", "{E128163A-E4A7-46D2-8F2B-CEFA6510E27E}"
@@ -17,9 +15,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "externals", "externals", "{D8B98221-F1B1-4A39-95B2-8993745FCF7D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HolisticWare.Core.Math.Intervals.NetStandard10", "..\..\source\HolisticWare.Core.Math.Intervals.NetStandard10\HolisticWare.Core.Math.Intervals.NetStandard10.csproj", "{4390ACCD-C763-4A93-8A52-964484D38F41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HolisticWare.Core.Math.Intervals.NetStandard10", "..\..\source\HolisticWare.Core.Math.Intervals.NetStandard10\HolisticWare.Core.Math.Intervals.NetStandard10.csproj", "{4390ACCD-C763-4A93-8A52-964484D38F41}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "HolisticWare.Core.Math.Intervals", "..\..\source\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.shproj", "{50A6E158-F8AC-4858-B3D0-DCF2630066C3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "UnitTests.HolisticWare.Core.Math.Intervals", "HolisticWare.Core.Math.Intervals.UnitTests\UnitTests.HolisticWare.Core.Math.Intervals.shproj", "{F029AA1F-74BC-463E-A6C3-559BC4BB2C53}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -69,6 +69,7 @@ Global
 		{D8B98221-F1B1-4A39-95B2-8993745FCF7D} = {C9723348-B983-46E8-B473-5BBDCDFF791E}
 		{4390ACCD-C763-4A93-8A52-964484D38F41} = {C9723348-B983-46E8-B473-5BBDCDFF791E}
 		{50A6E158-F8AC-4858-B3D0-DCF2630066C3} = {C9723348-B983-46E8-B473-5BBDCDFF791E}
+		{F029AA1F-74BC-463E-A6C3-559BC4BB2C53} = {F8D7CEC9-E8F5-4C79-99B6-9E08EE76E6B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4281D324-96F9-4BE0-87E5-66A67E057FBE}

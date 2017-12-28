@@ -39,6 +39,6 @@
       <Name>HolisticWare.Core.Math.Intervals.NetStandard10</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\..\UnitTests.HolisticWare.Core.Math.Intervals\UnitTests.HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\..\UnitTests.HolisticWare.Core.Math.Intervals\UnitTests.HolisticWare.Core.Math.Intervals.projitems')" />
+  <Import Project="..\..\HolisticWare.Core.Math.Intervals.UnitTests\UnitTests.HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\..\HolisticWare.Core.Math.Intervals.UnitTests\UnitTests.HolisticWare.Core.Math.Intervals.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

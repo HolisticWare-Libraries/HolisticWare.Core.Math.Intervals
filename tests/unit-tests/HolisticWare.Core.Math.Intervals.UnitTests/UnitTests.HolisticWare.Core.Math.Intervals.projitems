@@ -9,7 +9,11 @@
     <Import_RootNamespace>UnitTests.HolisticWare.Core.Math.Intervals</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Interval.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interval.Operators.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalConstructorTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.Conversion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalParsingTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.Relational.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.Arithmetic.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.cs" />
   </ItemGroup>
 </Project>
