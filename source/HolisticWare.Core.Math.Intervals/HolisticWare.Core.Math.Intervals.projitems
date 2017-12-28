@@ -12,11 +12,10 @@
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Core\.DS_Store" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Arithmetic.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Parse.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Relational.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Conversion.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
   </ItemGroup>
 </Project>

@@ -71,6 +71,8 @@ namespace Core.Math.Intervals
         //public static Interval<T> Parse(string interval_notation)
         public Interval(string interval_notation)
         {
+
+            return;
         }
 
         public Interval
@@ -90,6 +92,13 @@ namespace Core.Math.Intervals
         public Interval() 
             : 
             this (default(T), default(T), true, true)
+        {
+            return;
+        }
+
+        public Interval(T n)
+            :
+            this(n, n, true, true)
         {
             return;
         }
@@ -157,6 +166,8 @@ namespace Core.Math.Intervals
             
             return contained;
         }
+
+
 
     }
 }
