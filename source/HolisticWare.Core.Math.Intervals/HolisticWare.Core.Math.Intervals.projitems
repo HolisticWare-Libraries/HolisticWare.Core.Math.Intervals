@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />
+    <Folder Include="$(MSBuildThisFileDirectory)System\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
@@ -17,5 +18,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Parse.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Relational.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Conversion.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)System\IConvertible.cs" />
   </ItemGroup>
 </Project>
