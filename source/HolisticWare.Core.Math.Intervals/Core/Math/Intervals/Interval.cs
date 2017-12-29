@@ -18,7 +18,13 @@ namespace Core.Math.Intervals
              where 
                 T : global::HolisticWare.Math.INumeric<T>
             */
-        where T : IComparable, IComparable<T>
+        where T : 
+                    struct,
+                    IComparable,
+                    IComparable<T>,
+                    IConvertible,
+                    IEquatable<T>,
+                    IFormattable
     {
         public T BoundUpper
         {
@@ -167,7 +173,80 @@ namespace Core.Math.Intervals
             return contained;
         }
 
+        public bool Open
+        {
+            get
+            {
+                return OpenLeft && OpenRight;                
+            }
+        }
 
+        public bool OpenLeft
+        {
+            get
+            {
+                bool retval = false;
+
+                return retval;
+            }
+        }
+
+        public bool OpenRight
+        {
+            get
+            {
+                bool retval = false;
+
+                return retval;
+            }
+        }
+
+        public bool ClosedLeft
+        {
+            get
+            {
+                bool retval = false;
+
+                return retval;
+            }
+        }
+
+        public bool ClosedRight
+        {
+            get
+            {
+                bool retval = false;
+
+                return retval;
+            }
+        }
+
+        public double Centre
+        {
+            get
+            {
+                double l = (double) (object) BoundLower;
+                double u = (double) (object) BoundUpper;
+
+                return (l + u) / 2.0;
+            }
+        }
+
+        public bool IsClosed
+        {
+            get
+            {
+                return IsBoundLowerIncluded && IsBoundUpperIncluded;   
+            }
+        }
+
+        public bool IsOpen
+        {
+            get
+            {
+                return ! IsClosed;
+            }
+        }
 
     }
 }
