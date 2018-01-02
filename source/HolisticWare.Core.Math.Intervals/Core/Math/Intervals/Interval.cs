@@ -18,13 +18,7 @@ namespace Core.Math.Intervals
              where 
                 T : global::HolisticWare.Math.INumeric<T>
             */
-        where T : 
-                    struct,
-                    IComparable,
-                    IComparable<T>,
-                    IConvertible,
-                    IEquatable<T>,
-                    IFormattable
+            : INumeric<T>
     {
         public T BoundUpper
         {
@@ -245,6 +239,14 @@ namespace Core.Math.Intervals
             get
             {
                 return ! IsClosed;
+            }
+        }
+
+        public bool IsSemiOpen
+        {
+            get
+            {
+                return ;
             }
         }
 

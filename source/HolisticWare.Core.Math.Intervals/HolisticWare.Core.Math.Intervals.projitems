@@ -19,5 +19,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Relational.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Conversion.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)System\IConvertible.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)System\INumeric.cs" />
   </ItemGroup>
 </Project>

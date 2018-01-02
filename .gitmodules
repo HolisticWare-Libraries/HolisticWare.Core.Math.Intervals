@@ -1,0 +1,6 @@
+[submodule "externals/Core"]
+	path = externals/Core
+	url = https://github.com/moljac/HolisticWare.Core.git
+[submodule "externals/Core.Math"]
+	path = externals/Core.Math
+	url = https://github.com/moljac/HolisticWare.Core.Math.git
