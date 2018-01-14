@@ -18,7 +18,14 @@ namespace Core.Math.Intervals
              where 
                 T : global::HolisticWare.Math.INumeric<T>
             */
-            : INumeric<T>
+            // : INumeric<T> // NO GO! (error)
+            where T :
+                        struct,                     //  exclude System.String (class)
+                        System.IComparable,
+                        System.IComparable<T>,
+                        System.IConvertible,
+                        System.IEquatable<T>,
+                        System.IFormattable         //  exclude System.Boolean
     {
         public T BoundUpper
         {
@@ -246,7 +253,19 @@ namespace Core.Math.Intervals
         {
             get
             {
-                return ;
+                return 
+                    ( this.IsBoundLowerIncluded && ! this.IsBoundUpperIncluded )
+                    ||
+                    ( ! this.IsBoundLowerIncluded && this.IsBoundUpperIncluded )
+                    ;
+            }
+        }
+
+        public bool IsHalfOpen
+        {
+            get
+            {
+                return IsSemiOpen;    
             }
         }
 
