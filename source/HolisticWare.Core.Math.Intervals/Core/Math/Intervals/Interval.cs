@@ -19,11 +19,12 @@ namespace Core.Math.Intervals
                 T : global::HolisticWare.Math.INumeric<T>
             */
             // : INumeric<T> // NO GO! (error)
+            : IntervalBase
             where T :
                         struct,                     //  exclude System.String (class)
                         System.IComparable,
                         System.IComparable<T>,
-                        System.IConvertible,
+                        //System.IConvertible,      // no boxing between [int|...] and IConvertible
                         System.IEquatable<T>,
                         System.IFormattable         //  exclude System.Boolean
     {
@@ -51,30 +52,6 @@ namespace Core.Math.Intervals
             set;
         }
 
-        public static char BoundLowerIncludedChar
-        {
-            get;
-            set;
-        }
-
-        public static char BoundLowerExcludedChar
-        {
-            get;
-            set;
-        }
-
-        public static char BoundUpperIncludedChar
-        {
-            get;
-            set;
-        }
-
-        public static char BoundUpperExcludedChar
-        {
-            get;
-            set;
-        }
-
         //public static Interval<T> Parse(string interval_notation)
         public Interval(string interval_notation)
         {
@@ -87,7 +64,13 @@ namespace Core.Math.Intervals
                     T bound_lower, T bound_upper, 
                     bool include_bound_lower = true, bool include_bound_upper = true
                 ) 
+            //where T : ICom
         {
+            if (bound_upper < bound_lower)
+            {
+                throw new InvalidOperationException("Lower Bound must be less or equal than Upper Bound");
+            }
+
             this.BoundLower = bound_lower;
             this.BoundUpper = bound_upper;
             this.IsBoundLowerIncluded = include_bound_lower;

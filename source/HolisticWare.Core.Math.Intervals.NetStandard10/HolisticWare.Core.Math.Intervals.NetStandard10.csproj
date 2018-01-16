@@ -6,5 +6,8 @@
   <ItemGroup>
     <PackageReference Include="System.Runtime" Version="4.3.0" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\externals\Core\source\HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems')" />
 </Project>
