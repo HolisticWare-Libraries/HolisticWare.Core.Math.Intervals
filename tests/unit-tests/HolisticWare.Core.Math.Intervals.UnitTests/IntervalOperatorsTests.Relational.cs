@@ -37,25 +37,54 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
 
             Assert.Equals(equal, true);
 
+
+
+            interval_ints_11 = new Interval<int>("(1, 2)");
+            interval_ints_12 = new Interval<int>("(1, 2)");
+
+            equal = interval_ints_11 == interval_ints_12;
+
+            Assert.AreEqual(equal, true);
+
+            interval_ints_11 = new Interval<int>("[1, 2)");
+            interval_ints_12 = new Interval<int>("[1, 2)");
+
+            equal = interval_ints_11 == interval_ints_12;
+
+            Assert.AreEqual(equal, true);
+
+            interval_ints_11 = new Interval<int>("(1, 2]");
+            interval_ints_12 = new Interval<int>("(1, 2]");
+
+            equal = interval_ints_11 == interval_ints_12;
+
+            Assert.AreEqual(equal, true);
+
+
+            interval_ints_11 = new Interval<int>("[1, 2]");
+            interval_ints_12 = new Interval<int>("[1, 2]");
+
+            equal = interval_ints_11 == interval_ints_12;
+
+            Assert.AreEqual(equal, true);
+
+
+            interval_ints_11 = new Interval<int>("(1, 2]");
+            interval_ints_12 = new Interval<int>("[2, 3]");
+
+            interval_ints_21 = interval_ints_11 + interval_ints_12;
+
+
             return;
         }
 
         [Test()] // NUnit.Framework.TestAttribute
         public void LessThan()
         {
-            i01 = new Interval<int>();
+            interval_ints_01 = new Interval<int>();
 
-            Console.WriteLine($"interval i01 = {i01}");
+            Console.WriteLine($"interval i01 = {interval_ints_01}");
 
-            i11 = new Interval<int>("(1, 2)");
-            i12 = new Interval<int>("[2, 3)");
-
-            i21 = i11 + i12;
-
-            i11 = new Interval<int>("(1, 2]");
-            i12 = new Interval<int>("[2, 3]");
-
-            i21 = i11 + i12;
 
             return;
         }

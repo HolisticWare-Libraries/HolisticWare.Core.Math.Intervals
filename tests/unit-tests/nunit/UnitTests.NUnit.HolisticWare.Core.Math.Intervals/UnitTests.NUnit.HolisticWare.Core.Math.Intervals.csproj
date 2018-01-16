@@ -38,6 +38,10 @@
       <Project>{4390ACCD-C763-4A93-8A52-964484D38F41}</Project>
       <Name>HolisticWare.Core.Math.Intervals.NetStandard10</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\..\externals\Core\source\HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj">
+      <Project>{78A0A52D-DAAA-47B3-82FF-383CC3CF50B7}</Project>
+      <Name>HolisticWare.Core.NetStandard10</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\..\HolisticWare.Core.Math.Intervals.UnitTests\UnitTests.HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\..\HolisticWare.Core.Math.Intervals.UnitTests\UnitTests.HolisticWare.Core.Math.Intervals.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

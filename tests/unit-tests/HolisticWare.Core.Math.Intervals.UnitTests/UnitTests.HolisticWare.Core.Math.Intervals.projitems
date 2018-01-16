@@ -15,5 +15,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.Relational.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.Arithmetic.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IntervalOperatorsTests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntervalMethodsTests.cs" />
   </ItemGroup>
 </Project>

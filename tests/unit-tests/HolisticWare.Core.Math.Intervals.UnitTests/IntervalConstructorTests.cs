@@ -19,6 +19,7 @@ using Fact= NUnit.Framework.TestAttribute;
 #endif
 //------------------------------------------------------------------------------
 
+using Core;
 using Core.Math.Intervals;
 
 namespace UnitTests.HolisticWare.Core.Math.Intervals
@@ -28,6 +29,9 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
     #endif
     public class IntervalParsingTests
     {
+        Interval<DateTime> interval_datetime_11 = null;
+        Interval<DateTime> interval_datetime_12 = null;
+
         [Test()] // NUnit.Framework.TestAttribute
         public void Constructing()
         {
@@ -60,6 +64,32 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
             {
                 Console.WriteLine($"interval = {i}");
             }
+
+            bool contains = false;
+
+            interval_datetime_11 = new Interval<DateTime>("[20171011, 2018-01-10]");
+            contains = interval_datetime_11.Contains(new DateTime(2018, 01, 10));
+            Assert.AreEqual(contains, true);
+            contains = interval_datetime_11.Contains(new DateTime(2017, 10, 11));
+            Assert.AreEqual(contains, true);
+
+            interval_datetime_11 = new Interval<DateTime>("[20171011, 2018-01-10)");
+            contains = interval_datetime_11.Contains(new DateTime(2018, 01, 10));
+            Assert.AreEqual(contains, false);
+            contains = interval_datetime_11.Contains(new DateTime(2017, 10, 11));
+            Assert.AreEqual(contains, true);
+
+            interval_datetime_11 = new Interval<DateTime>("(20171011, 2018-01-10]");
+            contains = interval_datetime_11.Contains(new DateTime(2018, 01, 10));
+            Assert.AreEqual(contains, true);
+            contains = interval_datetime_11.Contains(new DateTime(2017, 10, 11));
+            Assert.AreEqual(contains, false);
+
+            interval_datetime_11 = new Interval<DateTime>("(20171011, 2018-01-10)");
+            contains = interval_datetime_11.Contains(new DateTime(2018, 01, 10));
+            Assert.AreEqual(contains, false);
+            contains = interval_datetime_11.Contains(new DateTime(2017, 10, 11));
+            Assert.AreEqual(contains, false);
 
             return;
         }

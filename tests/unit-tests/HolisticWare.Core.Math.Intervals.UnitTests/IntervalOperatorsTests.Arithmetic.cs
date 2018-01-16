@@ -31,15 +31,15 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
         [Test()] // NUnit.Framework.TestAttribute
         public void Addition_Sum_Union()
         {
-            i11 = new Interval<int>("(1, 2)");
-            i12 = new Interval<int>("[2, 3)");
+            interval_ints_11 = new Interval<int>("(1, 2)");
+            interval_ints_12 = new Interval<int>("[2, 3)");
 
-            i21 = i11 + i12;
+            interval_ints_21 = interval_ints_11 + interval_ints_12;
 
-            i11 = new Interval<int>("(1, 2]");
-            i12 = new Interval<int>("[2, 3]");
+            interval_ints_11 = new Interval<int>("(1, 2]");
+            interval_ints_12 = new Interval<int>("[2, 3]");
 
-            i21 = i11 + i12;
+            interval_ints_21 = interval_ints_11 + interval_ints_12;
 
             return;
         }

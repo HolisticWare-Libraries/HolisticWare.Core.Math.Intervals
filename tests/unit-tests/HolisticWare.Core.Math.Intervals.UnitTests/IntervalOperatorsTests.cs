@@ -28,19 +28,40 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
     #endif
     public partial class IntervalOperatorsTests
     {
-        Interval<int> i01 = null;
+        Interval<int> interval_ints_01 = null;
 
-        Interval<int> i11 = null;
-        Interval<int> i12 = null;
-        Interval<int> i13 = null;
-        Interval<int> i14 = null;
+        Interval<int> interval_ints_11 = null;
+        Interval<int> interval_ints_12 = null;
+        Interval<int> interval_ints_13 = null;
+        Interval<int> interval_ints_14 = null;
 
-        Interval<int> i21 = null;
+        Interval<int> interval_ints_21 = null;
 
-        Interval<double> d11 = null;
-        Interval<double> d12 = null;
-        Interval<double> d13 = null;
-        Interval<double> d14 = null;
+        Interval<double> interval_doubles_11 = null;
+        Interval<double> interval_doubles_12 = null;
+        Interval<double> interval_doubles_13 = null;
+        Interval<double> interval_doubles_14 = null;
 
+        Interval<DateTime> interval_datetime_11 = null;
+        Interval<DateTime> interval_datetime_12 = null;
+        Interval<DateTime> interval_datetime_13 = null;
+        Interval<DateTime> interval_datetime_14 = null;
+
+        Interval<ushort>    interval_ushort_11 = null;
+        Interval<short>     interval_short_11 = null;
+        Interval<uint>      interval_uint_11 = null;
+        Interval<long>      interval_ulong_11 = null;
+        Interval<ulong>     interval_long_11 = null;
+        Interval<decimal>   interval_decimal_11 = null;
+
+        /*
+        Intentionally excluded with generics constraints
+        
+        Interval<bool>      interval_bool_11 = null;
+        Interval<string>    interval_string_11 = null;
+
+        // Interval<char>   could be practical
+        Interval<char>      interval_char_11 = null;
+        */
     }
 }
