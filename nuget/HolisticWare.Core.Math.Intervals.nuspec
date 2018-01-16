@@ -24,7 +24,7 @@
 		http://semver.org/
 		-->
 		<version>
-			0.0.1.0
+			2018.01.16
 		</version>
 		<releaseNotes>
 			Mathematical Utiltities - Interval/Range implementation
