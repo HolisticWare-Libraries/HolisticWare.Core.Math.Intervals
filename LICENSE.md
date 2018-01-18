@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) .NET Foundation Contributors
+Copyright (c) 2017-2018 moljac / .NET Foundation Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
