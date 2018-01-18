@@ -64,9 +64,9 @@ namespace Core.Math.Intervals
                     T bound_lower, T bound_upper, 
                     bool include_bound_lower = true, bool include_bound_upper = true
                 ) 
-            //where T : ICom
         {
-            if (bound_upper < bound_lower)
+
+            if (bound_upper.CompareTo(bound_lower) < 0)
             {
                 throw new InvalidOperationException("Lower Bound must be less or equal than Upper Bound");
             }
@@ -102,6 +102,7 @@ namespace Core.Math.Intervals
 
             return;
         }
+
 
         public override string ToString()
         {
