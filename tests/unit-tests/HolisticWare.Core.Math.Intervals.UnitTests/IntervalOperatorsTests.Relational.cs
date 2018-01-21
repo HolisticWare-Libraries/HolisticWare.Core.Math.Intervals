@@ -35,7 +35,7 @@ namespace UnitTests.HolisticWare.Core.Math.Intervals
 
             equal = (new Interval<int>("(1,2]") == new Interval<int>("(1,2]"));
 
-            Assert.Equals(equal, true);
+            Assert.AreEqual(equal, true);
 
 
 
