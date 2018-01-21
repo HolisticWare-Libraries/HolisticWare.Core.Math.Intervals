@@ -6,7 +6,7 @@
     <SharedGUID>{50A6E158-F8AC-4858-B3D0-DCF2630066C3}</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>HolisticWare.Core.Math.Intervals</Import_RootNamespace>
+    <Import_RootNamespace>Core.Math.Intervals</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Core\" />

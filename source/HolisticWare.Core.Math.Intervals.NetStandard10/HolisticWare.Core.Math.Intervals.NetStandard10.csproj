@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
     <AssemblyName>HolisticWare.Core.Math.Intervals</AssemblyName>
+    <RootNamespace>Core.Math.Intervals</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Runtime" Version="4.3.0" />
