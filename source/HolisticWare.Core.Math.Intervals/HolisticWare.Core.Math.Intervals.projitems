@@ -14,12 +14,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Arithmetic.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Arithmetic.Addition.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Parse.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Relational.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\Interval.Operators.Conversion.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
-    <Compile Include="$(MSBuildThisFileDirectory)System\INumeric.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\IntervalBase.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
     <Compile Include="$(MSBuildThisFileDirectory)Core\Math\Intervals\IntervalToListExtensionMethods.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\INumeric.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Math\ArithmeticHelpers.cs" />
   </ItemGroup>
 </Project>

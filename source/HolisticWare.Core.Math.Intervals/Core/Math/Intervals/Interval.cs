@@ -52,6 +52,30 @@ namespace Core.Math.Intervals
             set;
         }
 
+        public static char BoundLowerIncludedChar
+        {
+            get;
+            set;
+        }
+
+        public static char BoundLowerExcludedChar
+        {
+            get;
+            set;
+        }
+
+        public static char BoundUpperIncludedChar
+        {
+            get;
+            set;
+        }
+
+        public static char BoundUpperExcludedChar
+        {
+            get;
+            set;
+        }
+
         //public static Interval<T> Parse(string interval_notation)
         public Interval(string interval_notation)
         {

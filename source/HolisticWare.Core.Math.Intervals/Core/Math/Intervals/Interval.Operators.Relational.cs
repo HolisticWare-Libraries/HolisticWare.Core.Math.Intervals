@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Core.Math.Intervals
 {
@@ -15,14 +16,28 @@ namespace Core.Math.Intervals
         {
             bool retval = false;
 
+            if
+                (
+                    i1.BoundLower.Equals(i2.BoundLower)
+                    &&
+                    i1.BoundUpper.Equals(i2.BoundUpper)
+                    &&
+                    i1.IsBoundLowerIncluded == i2.IsBoundLowerIncluded
+                    &&
+                    i2.IsBoundUpperIncluded == i2.IsBoundUpperIncluded
+                )
+            {
+                retval = true;                
+            }
+
+            //bool equal = EqualityComparer<T>.Default.Equals(i1, i2);
+
             return retval;
         }
 
         public static bool operator !=(Interval<T> i1, Interval<T> i2)
         {
-            bool retval = false;
-
-            return retval;
+            return ! (i1 == i2);
         }
 
         public static bool operator <(Interval<T> i1, Interval<T> i2)

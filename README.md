@@ -19,7 +19,7 @@ double and decimal) as well as DateTime.
 ```csharp
 
     Interval<int> interval_of_ints = new Interval<int>("[1,10]");
-
+    Interval<int> interval_of_ints = new Interval<int>("[1,10]");
 ```
 
 ## References/Links
@@ -35,4 +35,16 @@ This is folder structure used by Xamarin Components team:
 *   http://www.dmitry-kazakov.de/ada/intervals.htm
 
 *   http://www.nsc.ru/interval/Programing/IASpecfn.pdf
+
+*  http://www.boost.org/doc/libs/1_66_0/libs/numeric/interval/doc/interval.htm
+
+*   http://fab.cba.mit.edu/classes/S62.12/docs/Hickey_interval.pdf
+
+*   http://reference.wolfram.com/language/ref/Interval.html?view=all
+
+*   https://docs.oracle.com/cd/E19422-01/819-3696/iapgCreference.html
+
+*   http://www.dmitry-kazakov.de/ada/intervals.htm
+
+
 
