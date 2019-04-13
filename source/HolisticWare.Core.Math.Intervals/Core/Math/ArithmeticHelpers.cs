@@ -6,8 +6,15 @@ namespace Core.Math
 {
     public partial class ArithmeticHelpers
     {
-        
-        public static T Addition<T>(T lhs, T rhs, Type precision = typeof(double))
+        public static T Addition<T>(T lhs, T rhs)
+            where T : IConvertible
+        {
+            Type precision = typeof(double);
+
+            return Addition(lhs, rhs, precision);
+        }
+
+        public static T Addition<T>(T lhs, T rhs, Type precision)
             where T : IConvertible
         {
             if (precision == typeof(decimal))

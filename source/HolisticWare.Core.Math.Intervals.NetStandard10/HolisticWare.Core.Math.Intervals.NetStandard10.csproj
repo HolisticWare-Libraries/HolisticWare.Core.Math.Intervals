@@ -10,10 +10,13 @@
     <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\externals\Core\source\HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj" />
+    <None Include="..\HolisticWare.Core.Math.Intervals\Core\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\HolisticWare.Core.Math.Intervals\Core\.DS_Store" />
+    <Compile Remove="System\IConvertible.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\externals\Core\source\HolisticWare.Core.NetStandard10\HolisticWare.Core.NetStandard10.csproj" />
   </ItemGroup>
   <Import Project="..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems')" />
 </Project>

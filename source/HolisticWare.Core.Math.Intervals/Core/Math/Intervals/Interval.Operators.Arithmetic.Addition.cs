@@ -6,20 +6,29 @@ namespace Core.Math.Intervals
     /// <summary>
     /// Interval
     /// </summary>
-    /// <see cref="https://en.wikipedia.org/wiki/Interval_(mathematics)"/>
-    /// <see cref="https://en.wikipedia.org/wiki/Interval_arithmetic"/>
-    /// http://mathworld.wolfram.com/Interval.html
+    /// <a cref="https://en.wikipedia.org/wiki/Interval_(mathematics)"/>
+    /// <a cref="https://en.wikipedia.org/wiki/Interval_arithmetic"/>
+    /// <a href="http://mathworld.wolfram.com/Interval.html" />
     public partial class Interval<T>
     {
-        
+
+        //public static Interval<T> operator +(Interval<T> i1, Interval<T> i2)
+        //{
+        //    return new Interval<T>
+        //                    (
+        //                        ArithmeticHelpers.Addition(i1.BoundLower + i2.BoundLower), 
+        //                        ArithmeticHelpers.Addition(i1.BoundUpper + i2.BoundUpper)
+        //                    );
+        //}
+
+
         public static Interval<T> operator +(Interval<T> i1, Interval<T> i2)
         {
-            return new Interval<T>
+            return new Interval<double>
                             (
-                                ArithmeticHelpers.Addition(i1.BoundLower + i2.BoundLower), 
-                                ArithmeticHelpers.Addition(i1.BoundUpper + i2.BoundUpper)
+                                i1.BoundLower + i2.BoundLower,
+                                i1.BoundUpper + i2.BoundUpper
                             );
         }
-
     }
 }
