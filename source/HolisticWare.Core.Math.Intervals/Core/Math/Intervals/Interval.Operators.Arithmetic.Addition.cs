@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Globalization;
 
 namespace Core.Math.Intervals
@@ -22,13 +22,13 @@ namespace Core.Math.Intervals
         //}
 
 
-        public static Interval<T> operator +(Interval<T> i1, Interval<T> i2)
-        {
-            return new Interval<double>
-                            (
-                                i1.BoundLower + i2.BoundLower,
-                                i1.BoundUpper + i2.BoundUpper
-                            );
-        }
+        //public static Interval<T> operator +(Interval<T> i1, Interval<T> i2)
+        //{
+        //    return new Interval<double>
+        //                    (
+        //                        i1.BoundLower + i2.BoundLower,
+        //                        i1.BoundUpper + i2.BoundUpper
+        //                    );
+        //}
     }
 }
