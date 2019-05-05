@@ -7,7 +7,9 @@ namespace Core.Math
     public partial class ArithmeticHelpers
     {
         public static T Addition<T>(T lhs, T rhs)
+            #if !NETSTANDARD1_0
             where T : IConvertible
+            #endif
         {
             Type precision = typeof(double);
 
@@ -15,7 +17,9 @@ namespace Core.Math
         }
 
         public static T Addition<T>(T lhs, T rhs, Type precision)
+            #if !NETSTANDARD1_0
             where T : IConvertible
+            #endif
         {
             if (precision == typeof(decimal))
             {
@@ -39,4 +43,5 @@ namespace Core.Math
             return default(T);
         }
     }
+
 }
