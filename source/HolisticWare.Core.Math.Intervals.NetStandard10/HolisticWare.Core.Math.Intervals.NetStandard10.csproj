@@ -6,8 +6,9 @@
     <RootNamespace>Core.Math.Intervals</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-    <PackageReference Include="System.Runtime.Extensions" Version="4.3.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+    <PackageReference Include="System.Runtime.Extensions" Version="4.3.1" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\HolisticWare.Core.Math.Intervals\Core\.DS_Store" />

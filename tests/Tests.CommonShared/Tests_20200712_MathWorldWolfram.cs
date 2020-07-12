@@ -69,58 +69,97 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Reflection;
 
-using Core.Linq;
 
-namespace UnitTests.Core.Linq
+using Core.Math.Intervals;
+
+namespace UnitTests.Core.Math.Intervals
 {
-    public partial class UnitTestsSpan
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <see cref="https://mathworld.wolfram.com/Interval.html"/>
+    public partial class Tests_20200712_MathWorldWolfram
     {
-        int[] array_int = new int[] { 1, 2, 3, 4, 5 };
+        //[Benchmark()]
+        //public double Internval_of_int_Constructor_default_01(Span<int> span)
+        //{
+        //}
 
-        [Benchmark()]
-        public double Span_Int_Average(Span<int> span)
+        [Test()]
+        public void Internval_of_int_Constructor_01_default_01()
         {
-            return span.Average();
+            Interval<int> interval = new Interval<int>();
+
+            #if NUNIT
+            Assert.AreEqual(interval.BoundLower,    0);
+            Assert.AreEqual(interval.BoundUpper,    0);
+            Assert.AreEqual(interval.Centre,        0);
+            #elif XUNIT
+            Assert.Equal(interval.BoundLower,       0);
+            Assert.Equal(interval.BoundUpper,       0);
+            Assert.Equal(interval.Centre,           0);
+            #elif MSTEST
+            Assert.AreEqual(interval.BoundLower,    0);
+            Assert.AreEqual(interval.BoundUpper,    0);
+            Assert.AreEqual(interval.Centre,        0);
+            #endif
+
+
+            return;
         }
 
         [Test()]
-        public void Span_Int_Average_Test()
+        public void Internval_of_int_Constructor_02_int_01()
         {
-            double average = Span_Int_Average(new Span<int>(array_int));
+            Interval<int> interval = new Interval<int>(2);
 
-            // Assert
             #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(interval.BoundLower,    2.00);
+            Assert.AreEqual(interval.BoundUpper,    2.00);
+            //Assert.AreEqual(interval.Centre,        2.00);
             #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
+            Assert.Equal(interval.BoundLower,       2.00);
+            Assert.Equal(interval.BoundUpper,       2.00);
+            //Assert.Equal(interval.Centre,           2.00);
             #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
+            Assert.AreEqual(interval.BoundLower,    2.00);
+            Assert.AreEqual(interval.BoundUpper,    2.00);
+            //Assert.AreEqual(interval.Centre,        2.00);
             #endif
 
             return;
         }
 
-        double[] array_double = new double[] { 1.0 , 2.0 , 3.0, 4.0, 5.0 };
-
-        [Benchmark()]
-        public double Span_Double_Average(Span<int> span)
+        [Test()]
+        public void Internval_of_int_Constructor_03_string_01()
         {
-            return span.Average();
+            Interval<int> interval = new Interval<int>("[1,2]");
+
+            // Assert
+            //#if NUNIT
+            //Assert.AreEqual(average, 3.00, 0.01);
+            //#elif XUNIT
+            //Assert.Equal(average, 3.00, 2);
+            //#elif MSTEST
+            //Assert.AreEqual(average, 3.00, 0.01);
+            //#endif
+
+            return;
         }
 
         [Test()]
-        public void Span_Double_Average_Test()
+        public void Internval_of_int_Constructor_04_bounds_01()
         {
-            double average = Span_Double_Average(new Span<int>(array_int));
+            Interval<int> interval = new Interval<int>(3, 4, true, false);
 
             // Assert
-            #if NUNIT
-            Assert.AreEqual(average, 3.00, 0.01);
-            #elif XUNIT
-            Assert.Equal(average, 3.00, 2);
-            #elif MSTEST
-            Assert.AreEqual(average, 3.00, 0.01);
-            #endif
+            //#if NUNIT
+            //Assert.AreEqual(average, 3.00, 0.01);
+            //#elif XUNIT
+            //Assert.Equal(average, 3.00, 2);
+            //#elif MSTEST
+            //Assert.AreEqual(average, 3.00, 0.01);
+            //#endif
 
             return;
         }

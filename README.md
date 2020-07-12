@@ -30,6 +30,10 @@ This is folder structure used by Xamarin Components team:
 
 *   https://en.wikipedia.org/wiki/Interval_arithmetic
 
+*   http://web.mit.edu/hyperbook/Patrikalakis-Maekawa-Cho/node45.html
+
+*   https://subs.emis.de/LNI/Seminar/Seminar07/148.pdf
+
 *   https://github.com/psolymos/intrval
 
 *   http://www.dmitry-kazakov.de/ada/intervals.htm
@@ -46,5 +50,10 @@ This is folder structure used by Xamarin Components team:
 
 *   http://www.dmitry-kazakov.de/ada/intervals.htm
 
+*   http://www.mathematik.uni-karlsruhe.de/ianm2/~kulisch/media/arjpkx.pdf
 
+*   implementations
 
+    *   https://github.com/mauriciopoppe/interval-arithmetic
+
+    *   https://arxiv.org/pdf/1611.09567.pdf

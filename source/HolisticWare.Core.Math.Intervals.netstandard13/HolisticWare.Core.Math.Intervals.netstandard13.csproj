@@ -4,5 +4,8 @@
     <TargetFramework>netstandard1.3</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
+  </ItemGroup>
   <Import Project="..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems" Label="Shared" Condition="Exists('..\HolisticWare.Core.Math.Intervals\HolisticWare.Core.Math.Intervals.projitems')" />
 </Project>

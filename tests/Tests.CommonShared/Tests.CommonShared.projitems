@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)UnitTestsSpan.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_01_Basics_Wikipedia_int.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_01_Basics_Wikipedia_double.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_MathIsFun.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_MathWorldWolfram.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_BriliantOrg.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_02_Arithmetics_Wikipedia_int.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_02_Arithmetics_Wikipedia_double.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Tests_20200712_02_MIT.cs" />
   </ItemGroup>
 </Project>
