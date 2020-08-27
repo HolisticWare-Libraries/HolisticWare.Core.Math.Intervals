@@ -1,12 +1,39 @@
----
-uti: com.xamarin.workbook
-id: ff1a8bbf-e74f-43ce-a22c-5ac22aa937cc
-title: HolisticWare.Core.Math.Intervals
-platforms:
-- Console
----
-
 # HolisticWare.Core.Math.Intervals
+
+*   nuget/assembly
+
+    ```
+    HolisticWare.Core.Math.Intervals
+    ```
+
+*   namespaces
+
+    ```
+    Core.Math.Intervals
+    ```
+
+*   operations (operators) / methods
+
+    *   methods
+
+        *   `Compress()`
+
+        *   `Decompress()`
+
+    *   operators
+
+        *   `operator==`
+
+        *   `operator!=`
+
+        *   `operator+`
+
+        *   `operator-`
+
+        *   `operator*`
+
+        *   `operator/`
+
 
 Mathematical Interval/Range implementation for .NET Standard 1.0.
 
@@ -52,7 +79,13 @@ This is folder structure used by Xamarin Components team:
 
 *   http://www.mathematik.uni-karlsruhe.de/ianm2/~kulisch/media/arjpkx.pdf
 
-*   implementations
+*   https://interval.louisiana.edu/GLOBSOL/whatisop/node6.html
+
+*   http://www.nsc.ru/interval/Introduction/BakerSurvey.pdf
+
+## Implementations
+
+*   https://github.com/search?q=intervals+language%3AC%23
 
     *   https://github.com/mauriciopoppe/interval-arithmetic
 
@@ -61,12 +94,15 @@ This is folder structure used by Xamarin Components team:
 
 ## Demo
 
-https://github.com/otac0n/intervals
+*   https://github.com/search?q=intervals+language%3AC%23
 
-https://github.com/fallin/Itc4net
+*   https://github.com/otac0n/intervals
 
-https://github.com/Winsto/Interval
+*   https://github.com/fallin/Itc4net
 
-https://github.com/RetailRocket/Interval
+*   https://github.com/Winsto/Interval
 
-https://github.com/ikriv/tasktimer
+*   https://github.com/RetailRocket/Interval
+
+*   https://github.com/ikriv/tasktimer
+
