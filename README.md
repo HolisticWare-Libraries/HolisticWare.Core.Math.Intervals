@@ -83,6 +83,9 @@ This is folder structure used by Xamarin Components team:
 
 *   http://www.nsc.ru/interval/Introduction/BakerSurvey.pdf
 
+*   https://en.wikipedia.org/wiki/Mathematical_operators_and_symbols_in_Unicode
+
+
 ## Implementations
 
 *   https://github.com/search?q=intervals+language%3AC%23
