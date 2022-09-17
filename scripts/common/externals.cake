@@ -3,57 +3,63 @@
 
 //---------------------------------------------------------------------------------------
 Task ("externals")
-    //.IsDependentOn ("externals-base")
+    .IsDependentOn ("externals-build")
     // .WithCriteria (!FileExists ("./externals/HolisticWare.Core.Math.Statistics.aar"))
+    ;
+    
+Task("externals-git-submodules-update")
     .Does
     (
         () =>
         {
-            Information("externals ...");
-
-            string [] folders = new string[]
-            {
-                "./externals/",
-                "./externals/results/",
-                "./externals/results/unit-tests/",
-            };
-
-            foreach(string folder in folders)
-            {
-                Information($"    creating ...{folder}");
-                if (! DirectoryExists (folder))
-                {
-                    CreateDirectory (folder);
-                }
-            }
-
-            if (FileExists("externals.private.cake"))
-            {
-                CakeExecuteScript("externals.private.cake");
-            }
-
-            Information("    downloading ...");
-
-            // if ( ! string.IsNullOrEmpty(AAR_URL) )
-            // {
-            // 	//DownloadFile (AAR_URL, "./externals/HolisticWare.Core.Math.Statistics.aar");
-            // }
-
-            return;
-            // Externals.Initialize(Context);
-            // Externals.Execute();
+            int exit_code;
+            exit_code = StartProcess
+                            (
+                                "git", 
+                                new ProcessSettings
+                                { 
+                                    Arguments = "submodule init" 
+                                }
+                            );
+            exit_code = StartProcess
+                            (
+                                "git", 
+                                new ProcessSettings
+                                { 
+                                    Arguments = "submodule update --init --recursive" 
+                                }
+                            );
+            exit_code = StartProcess
+                            (
+                                "git", 
+                                new ProcessSettings
+                                { 
+                                    Arguments = "pull --recurse-submodules" 
+                                }
+                            );
+            exit_code = StartProcess
+                            (
+                                "git", 
+                                new ProcessSettings
+                                { 
+                                    Arguments = "submodule foreach --recursive git pull" 
+                                }
+                            );
 
             return;
         }
     );
 
 Task("externals-build")
-    .IsDependentOn ("nuget-restore")
+    .IsDependentOn ("externals-build-submodules")
+    ;
+
+Task("externals-build-submodules")
     .Does
     (
         () =>
         {
-            FilePathCollection files = GetFiles("./external*/**/build.cake");
+            FilePathCollection files = GetFiles("./external*-submodule*/**/build.cake");
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
@@ -65,8 +71,8 @@ Task("externals-build")
                             Verbosity = Verbosity.Diagnostic,
                             Arguments = new Dictionary<string, string>()
                             {
-                                //{"verbosity",   "diagnostic"},
-                                {"target",      "libs"},
+                                { "verbosity",  verbosity},
+                                { "target",     "nuget-pack"},
                             },
                         }
                     );
