@@ -3,29 +3,15 @@
 LibrarySourceSolutions  = GetFiles(source_solutions);
 LibrarySourceProjects   = GetFiles(source_projects);
 
-string[] configurations = new string[] 
-{ 
-    "Debug", 
-    "Release" 
-};
-
 //---------------------------------------------------------------------------------------
 Task("libs")
     .IsDependentOn ("clean")
-    .IsDependentOn ("nuget-restore")
     .IsDependentOn ("nuget-restore-libs")
     .IsDependentOn ("libs-msbuild-solutions")
     .IsDependentOn ("libs-msbuild-projects")
     .IsDependentOn ("libs-dotnet-solutions")
     .IsDependentOn ("libs-dotnet-projects")
-    .Does
-    (
-        () =>
-        {
-            return;
-        }
-    );
-
+    ;
 
 Task("libs-msbuild-solutions")
     .Does
@@ -44,8 +30,8 @@ Task("libs-msbuild-solutions")
                             Configuration = configuration,
                             Restore = true,
                         }
-                        //.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
                         .WithRestore()
+                        //.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
                     );
                 }
             }
@@ -63,7 +49,7 @@ Task("libs-dotnet-solutions")
             {
                 foreach(FilePath sln in LibrarySourceSolutions)
                 {
-                    DotNetCoreBuild
+                    DotNetBuild
                     (
                         sln.ToString(),
                         new DotNetCoreBuildSettings
@@ -96,8 +82,8 @@ Task("libs-msbuild-projects")
                             Configuration = configuration,
                             Restore = true,
                         }
-                        //.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
                         .WithRestore()
+                        //.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
                     );
                 }
             }
@@ -115,7 +101,7 @@ Task("libs-dotnet-projects")
             {
                 foreach(FilePath prj in LibrarySourceProjects)
                 {
-                    DotNetCoreBuild
+                    DotNetBuild
                     (
                         prj.ToString(),
                         new DotNetCoreBuildSettings
@@ -147,9 +133,9 @@ public void Build(string pattern)
 					Configuration = configuration,
                     Restore = true,
 				}
-				//.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
-				.WithProperty("AndroidClassParser", "jar2xml")
 				.WithRestore()
+				.WithProperty("AndroidClassParser", "class-parse")
+				//.WithProperty("DefineConstants", "TRACE;DEBUG;NETCOREAPP2_0;NUNIT")
 			);
 		}
 	}

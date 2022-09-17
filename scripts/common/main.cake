@@ -1,3 +1,4 @@
+// #addin nuget:?package=System.Threading.Tasks&version=4.3.0
 
 //---------------------------------------------------------------------------------------
 Task ("clean")

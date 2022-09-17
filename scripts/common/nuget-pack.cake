@@ -23,22 +23,20 @@ Task("nuget-pack")
 							.WithTarget("Pack")
 							//.WithProperty("PackageVersion", NUGET_VERSION)
 							// PATH!!!!!!!!
-							.WithProperty("PackageOutputPath", "../../output")
+							.WithProperty("PackageOutputPath", "../../output/msbuild-pack/")
 				);
 
-				DotNetCorePack
+				DotNetPack
 				(
 					prj.ToString(),
 					new DotNetCorePackSettings
 					{
 						Configuration = "Release",
 						// PATH!!!!!!!!
-						OutputDirectory = "./output/"
+						OutputDirectory = "./output/dotnet-pack/"
 					}
 				);
 			}
-
-
 
             return;
         }
