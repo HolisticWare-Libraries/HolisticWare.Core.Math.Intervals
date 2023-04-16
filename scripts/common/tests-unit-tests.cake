@@ -7,6 +7,8 @@ Task("unit-tests")
     (
         () =>
         {
+            EnsureDirectoryExists("./output/results/unit-tests/");
+
             try
             {
                 RunTarget("unit-tests-nunit");
@@ -33,7 +35,7 @@ Task("unit-tests")
         }
     );
 
-var reports = Directory("./externals/results/unit-tests/");
+var reports = Directory("/output/results/unit-tests/");
 
 
 Task("unit-tests-nunit")
@@ -80,7 +82,7 @@ Task("unit-tests-nunit")
                 UnitTestsNUnitAssemblies,
                 new NUnit3Settings
                 {
-                    OutputFile = "./externals/results/unit-tests/Nunit3.1.txt",
+                    OutputFile = "./output/results/unit-tests/Nunit3.1.txt",
                 }
             );
 
@@ -96,7 +98,7 @@ Task("unit-tests-nunit")
                 UnitTestsNUnitAssemblies,
                 new NUnit3Settings
                 {
-                    OutputFile = "./externals/results/unit-tests/Nunit3.2.txt",
+                    OutputFile = "./output/results/unit-tests/Nunit3.2.txt",
                 }
             );
             return;
@@ -151,7 +153,8 @@ Task("unit-tests-xunit")
             {
                 ReportUnit(reports);
             }
-            MoveFile("TestResult.xml", "./externals/results/unit-tests/TestResult.xml");
+
+            MoveFile("TestResult.xml", "./output/results/unit-tests/TestResult.xml");
         }
     );
 
@@ -174,14 +177,14 @@ Task("unit-tests-mstest")
                 "./tests/unit-tests/project-references/UnitTests.MSTest/bin/Debug/**/UnitTests.MSTest.dll",
                 new MSTestSettings
                 {
-                    ResultsFile = "./externals/results/unit-tests/MSTest.txt",
+                    ResultsFile = "./output/results/unit-tests/MSTest.txt",
                 }
             );
             DotNetTest
             (
                 "./tests/unit-tests/project-references/UnitTests.MSTest/UnitTests.MSTest.csproj",
                 //"xunit",  "--no-build -noshadow"
-                new DotNetCoreTestSettings()
+                new DotNetTestSettings()
                 {
                     ResultsDirectory = reports,
                 }

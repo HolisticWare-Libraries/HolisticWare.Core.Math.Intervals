@@ -17,10 +17,10 @@ Task("nuget-restore-externals")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.ToString()}-packages"
@@ -32,10 +32,10 @@ Task("nuget-restore-externals")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.ToString()}-packages"
@@ -47,10 +47,10 @@ Task("nuget-restore-externals")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.GetDirectory()}-packages"
@@ -62,10 +62,10 @@ Task("nuget-restore-externals")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.GetDirectory()}-packages"
@@ -87,10 +87,10 @@ Task("nuget-restore-libs")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.ToString()}-packages"
@@ -102,10 +102,10 @@ Task("nuget-restore-libs")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.GetDirectory()}-packages"
@@ -127,10 +127,10 @@ Task("nuget-restore-samples")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.ToString()}-packages"
@@ -142,10 +142,10 @@ Task("nuget-restore-samples")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.GetDirectory()}-packages"
@@ -168,10 +168,10 @@ Task("nuget-restore-tests")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.ToString()}-packages"
@@ -183,10 +183,10 @@ Task("nuget-restore-tests")
             foreach(FilePath file in files)
             {
                 Information("File: {0}", file);
-        		NuGetRestore
+        		DotNetRestore
                     (
-                        file,
-                        new NuGetRestoreSettings
+                        file.ToString(),
+                        new DotNetRestoreSettings
                         {
                             // separate folder for nuget packages for analysis
                             PackagesDirectory = $"{file.GetDirectory()}-packages"
@@ -204,7 +204,13 @@ public void RestorePackages(string pattern)
 
 	foreach(FilePath file in files)
 	{
-		NuGetRestore(file, new NuGetRestoreSettings { } );
+		DotNetRestore
+                (
+                    file.ToString(), 
+                    new DotNetRestoreSettings 
+                    {                         
+                    } 
+                );
 	}
 
 	return;

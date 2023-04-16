@@ -3,6 +3,7 @@
 
 //---------------------------------------------------------------------------------------
 Task ("externals")
+    .IsDependentOn ("externals-repos-download")
     .IsDependentOn ("externals-build")
     // .WithCriteria (!FileExists ("./externals/HolisticWare.Core.Math.Statistics.aar"))
     ;
@@ -82,6 +83,22 @@ Task("externals-build-submodules")
         }
     );
 
+Task("externals-repos-download")
+    .Does
+    (
+        () =>
+        {
+            Parallel.ForEach
+                        (
+                            ExternalReposToDownload,
+                            repo =>
+                            {
+                            }
+                        );
+
+            return;
+        }
+    );
 
 public partial class Externals
 {
